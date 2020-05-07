@@ -21,4 +21,4 @@ def index():
 
 api.add_resource(Schedule, '/schedule')
 
-app.run(host="127.0.0.1", port="5000", debug=True)
+app.run(host="", port="5000", debug=True)
