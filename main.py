@@ -22,4 +22,4 @@ def index():
 api.add_resource(Schedule, '/schedule')
 
 if __name__ == "__main__":
-	app.run(host="", port="", debug=True)
+	app.run(debug=True)
