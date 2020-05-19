@@ -54,7 +54,14 @@ def schedule(self, Session, SchoolId, PersonType, PersonId):
 		roomStructure = re.compile('Lokale: ')
 
 		#Getting the lesson id
-		lessonIdSplit1 = schedule['href'].split("absid=")
+		# Get the lesson if normal
+		if "absid" in schedule['href']:
+			lessonIdSplit1 = schedule['href'].split("absid=")
+		elif "ProeveholdId" in schedule['href']:
+			lessonIdSplit1 = schedule['href'].split("absid=")
+		else:
+			print("Error")
+		
 		lessonIdSplit2 = lessonIdSplit1[1].split("&prevurl=")
 		lessonId = lessonIdSplit2[0]
 		
