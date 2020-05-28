@@ -51,7 +51,7 @@ def schedule(self, Session, SchoolId, PersonType, PersonId):
 		timeStructure = re.compile('\d{2}/\d+-\d{4} \d{2}:\d{2} til \d{2}:\d{2}')
 		teamStructure = re.compile('Hold: ')
 		teacherStructure = re.compile('Lærer.*: ')
-		roomStructure = re.compile('Lokale: ')
+		roomStructure = re.compile('Lokale.*: ')
 
 		#Getting the lesson id
 		# Get the lesson if normal
