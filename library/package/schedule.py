@@ -48,7 +48,7 @@ def schedule(self, Session, SchoolId, PersonType, PersonId):
 
 	for schedule in scheduleContainer:
 		rows = schedule['data-additionalinfo'].split("\n")
-		timeStructure = re.compile('\d{2}/\d+-\d{4} \d{2}:\d{2} til \d{2}:\d{2}')
+		timeStructure = re.compile('\d+/\d+-\d{4} \d+:\d+ til \d+:\d+')
 		teamStructure = re.compile('Hold: ')
 		teacherStructure = re.compile('Lærer.*: ')
 		roomStructure = re.compile('Lokale.*: ')
