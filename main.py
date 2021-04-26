@@ -7,8 +7,13 @@ import markdown
 #Classes
 from resources.schedule import Schedule
 
+api_v1_cors_config = {
+  "origins": '*',
+  "allow_headers": ["Username", "Password", "SchoolId", "Type"]
+}
+
 app = Flask(__name__)
-CORS(app)
+cors = CORS(app, resources={r"*": api_v1_cors_config})
 
 api = Api(app)
 
